@@ -4,6 +4,7 @@ import { CustomersModule } from './customers/customers.module';
 import entities from './typeORM';
 import { User } from './typeORM/User';
 import { UsersModule } from './users/users.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -18,7 +19,8 @@ import { UsersModule } from './users/users.module';
       database:'nestjs_practice_db',
       entities:entities,
       synchronize:true 
-    })
+    }),
+    AuthModule
   ],
   controllers: [],
   providers: [],
