@@ -12,9 +12,11 @@ async function bootstrap() {
     resave:false,
     saveUninitialized:false,
     cookie:{
-      maxAge:20000
+      maxAge:900000
     }
   }));
+  app.use(passport.initialize());
+  app.use(passport.session());
   await app.listen(3000);
 }
 bootstrap();
