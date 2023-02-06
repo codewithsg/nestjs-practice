@@ -18,7 +18,7 @@ import { PassportModule } from '@nestjs/passport';
       username:'root',
       password:'root',
       database:'nestjs_practice_db',
-      entities:entities,
+      entities,
       synchronize:true 
     }),
     AuthModule,
