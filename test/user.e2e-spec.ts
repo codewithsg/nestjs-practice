@@ -45,7 +45,7 @@ describe('UsersController E2E Test',()=>{
         it('should return a 400 when email is invalid',()=>{
             return request(app.getHttpServer()).post(CREATE_USER_URL).send({
                 username:'spinz',
-                password:'adminTe',
+                password:'adminTest',
                 email:'spinz'
             }).expect(400);
         })
